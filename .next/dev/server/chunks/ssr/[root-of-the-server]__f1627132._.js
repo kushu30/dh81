@@ -32,18 +32,18 @@ const residents = [
         name: "Abhay Singh",
         role: "Full Stack Dev",
         image: "/images/AbhaySingh.png",
-        linkedin: "https://linkedin.com/",
-        github: "https://github.com/",
-        portfolio: "https://portfolio.com",
+        linkedin: "https://linkedin.com/abhaydesu",
+        github: "https://github.com/abhaydesu",
+        portfolio: "https://abhaydesu.dev",
         resume: "/resumes/abhay-resume.pdf"
     },
     {
         name: "Kushagra Shukla",
         role: "FinTech Enthusiast | Full Stack Dev",
         image: "/images/KushagraShukla.png",
-        linkedin: "https://linkedin.com",
-        github: "https://github.com/",
-        portfolio: "https://portfolio.com",
+        linkedin: "https://linkedin.com/kushu30",
+        github: "https://github.com/kushu30",
+        portfolio: "https://kushu30.dev",
         resume: "/resumes/kushagra-resume.pdf"
     },
     {
