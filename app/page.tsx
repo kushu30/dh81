@@ -1,24 +1,33 @@
-import { Linkedin, ExternalLink, MapPin } from "lucide-react"
+import { Linkedin, ExternalLink, MapPin, Github, Download, Globe } from "lucide-react"
 import Link from "next/link"
 
 const residents = [
   {
-    name: "Resident One",
-    role: "Software Engineer",
-    image: "/placeholder.svg?height=800&width=600",
-    linkedin: "https://linkedin.com",
+    name: "Abhay Singh",
+    role: "Full Stack Dev",
+    image: "/images/AbhaySingh.png",
+    linkedin: "https://linkedin.com/",
+    github: "https://github.com/",
+    portfolio: "https://portfolio.com",
+    resume: "/resumes/abhay-resume.pdf"
   },
   {
-    name: "Resident Two",
-    role: "AI Researcher",
-    image: "/placeholder.svg?height=800&width=600",
+    name: "Kushagra Shukla",
+    role: "FinTech Enthusiast | Full Stack Dev",
+    image: "/images/KushagraShukla.png",
     linkedin: "https://linkedin.com",
+    github: "https://github.com/",
+    portfolio: "https://portfolio.com",
+    resume: "/resumes/kushagra-resume.pdf"
   },
   {
-    name: "Resident Three",
-    role: "Product Designer",
-    image: "/placeholder.svg?height=800&width=600",
+    name: "Adhish Shukla",
+    role: "Problem Solving | DSA",
+    image: "/images/AdhishShukla.png",
     linkedin: "https://linkedin.com",
+    github: "https://github.com/",
+    portfolio: "https://portfolio.com",
+    resume: "/resumes/adhish-resume.pdf"
   },
 ]
 
@@ -96,21 +105,48 @@ export default function Home() {
                 </div>
 
                 {/* Overlay Content */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent p-10 flex flex-col justify-end">
-                  <div className="space-y-4">
-                    <div className="h-1 w-0 bg-primary group-hover:w-12 transition-all duration-700" />
-                    <span className="text-[10px] uppercase tracking-widest font-bold text-primary block opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-8 flex flex-col justify-end">
+                  <div className="space-y-5">
+                    <div className="h-0.5 w-0 bg-primary group-hover:w-16 transition-all duration-700" />
+                    <span className="text-[9px] uppercase tracking-[0.2em] font-bold text-primary/80 block opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-500">
                       {person.role}
                     </span>
-                    <h3 className="text-4xl font-black tracking-tight uppercase italic">{person.name}</h3>
-                    <div className="pt-4 opacity-0 group-hover:opacity-100 translate-y-8 group-hover:translate-y-0 transition-all duration-700">
-                      <Link
-                        href={person.linkedin}
-                        target="_blank"
-                        className="inline-flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest bg-white text-black px-6 py-3 rounded-full hover:bg-primary transition-colors"
-                      >
-                        LinkedIn <Linkedin className="w-3 h-3" />
-                      </Link>
+                    <h3 className="text-3xl font-black tracking-tight uppercase italic text-white/90 group-hover:text-white transition-colors duration-500">{person.name}</h3>
+                    <div className="pt-6 opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-700">
+                      <div className="grid grid-cols-2 gap-3">
+                        <Link
+                          href={person.linkedin}
+                          target="_blank"
+                          className="group/btn inline-flex items-center justify-center gap-2 text-[8px] font-bold uppercase tracking-[0.15em] bg-[#0077B5] hover:bg-[#005885] text-white px-4 py-3 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#0077B5]/25 border border-[#0077B5]/20"
+                        >
+                          <Linkedin className="w-3 h-3 group-hover/btn:rotate-12 transition-transform" />
+                          LinkedIn
+                        </Link>
+                        <Link
+                          href={person.github}
+                          target="_blank"
+                          className="group/btn inline-flex items-center justify-center gap-2 text-[8px] font-bold uppercase tracking-[0.15em] bg-[#24292e] hover:bg-[#1a1e22] text-white px-4 py-3 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#24292e]/25 border border-[#24292e]/20"
+                        >
+                          <Github className="w-3 h-3 group-hover/btn:rotate-12 transition-transform" />
+                          GitHub
+                        </Link>
+                        <Link
+                          href={person.portfolio}
+                          target="_blank"
+                          className="group/btn inline-flex items-center justify-center gap-2 text-[8px] font-bold uppercase tracking-[0.15em] bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-4 py-3 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 border border-purple-500/20"
+                        >
+                          <Globe className="w-3 h-3 group-hover/btn:rotate-12 transition-transform" />
+                          Portfolio
+                        </Link>
+                        <Link
+                          href={person.resume}
+                          download
+                          className="group/btn inline-flex items-center justify-center gap-2 text-[8px] font-bold uppercase tracking-[0.15em] bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-4 py-3 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-emerald-500/25 border border-emerald-500/20"
+                        >
+                          <Download className="w-3 h-3 group-hover/btn:rotate-12 transition-transform" />
+                          Resume
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -133,11 +169,11 @@ export default function Home() {
           </div>
           <div className="space-y-4">
             <h2 className="text-5xl font-black tracking-tighter uppercase italic">Our Base</h2>
-            <p className="text-2xl text-muted-foreground font-light">House Number 81, Innovation District</p>
+            <p className="text-2xl text-muted-foreground font-light">House Number 81 (2nd Floor - Metal Staircase), 3 Main JHBC Road, JHBCS Layout, Bengaluru, Karnataka - 560078</p>
           </div>
 
           <Link
-            href="https://maps.google.com"
+            href="https://maps.app.goo.gl/jV4JZJkfDPgYSL2b8"
             target="_blank"
             className="group relative flex items-center gap-4 bg-white/5 border border-white/10 px-12 py-6 rounded-full hover:bg-white hover:text-black transition-all duration-500 overflow-hidden"
           >
@@ -152,7 +188,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-12 border-t border-white/5 text-center">
         <p className="text-[10px] uppercase tracking-[0.4em] opacity-30 font-bold">
-          © 2026 DevHouse 81. Crafted for Creators.
+          © 2026 DevHouse 81. Crafted by people at DH81.
         </p>
       </footer>
     </main>
