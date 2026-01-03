@@ -56,7 +56,10 @@ export default function Home() {
             Dev<span className="not-italic opacity-20">House</span>
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl max-w-xl mx-auto font-light tracking-wide">
-            A collaborative living space for builders, thinkers, and innovators.
+          Not a hub. Not a lab. Just a flat—
+          where curiosity is contagious,
+          the kettle’s always on,
+          and the best ideas brew right where we’re at.
           </p>
         </div>
 
